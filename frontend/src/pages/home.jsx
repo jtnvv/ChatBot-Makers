@@ -16,6 +16,10 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  p {
+    color:black;
+    margin:0px;
+  }
 `;
 
 const Title = styled.h1`
@@ -33,6 +37,7 @@ const Logo = styled.img`
 const ButtonContainer = styled.div`
   display: flex;
   gap: 20px;
+  margin-bottom: 10px;
 `;
 
 const GreenButton = styled(Link)`
@@ -75,21 +80,23 @@ const HomeImage = styled.img`
 `;
 
 function Home() {
-    return (
-        <HomeContainer>
-            <Content>
-                <Logo src={logo} alt="Logo" />
-                <Title>Welcome to MakersBot-1o</Title>
-                <ButtonContainer>
-                    <GreenButton to="/chat">Go to Chat</GreenButton>
-                    <WhiteButton to="/about">??????</WhiteButton>
-                </ButtonContainer>
-            </Content>
-            <ImageContainer>
-                <HomeImage src={homeImage} alt="Home" />
-            </ImageContainer>
-        </HomeContainer>
-    );
+  return (
+    <HomeContainer>
+      <Content>
+        <Logo src={logo} alt="Logo" />
+        <Title>Welcome to MakersBot-1o</Title>
+        <ButtonContainer>
+          <GreenButton to="/chat">Go to Chat</GreenButton>
+        </ButtonContainer>
+        <p>Made by:</p>
+        <p>Jonathan Velosa</p>
+        <p>Mateus Fidelis</p>
+      </Content>
+      <ImageContainer>
+        <HomeImage src={homeImage} alt="Home" />
+      </ImageContainer>
+    </HomeContainer>
+  );
 }
 
 export default Home;

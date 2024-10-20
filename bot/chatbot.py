@@ -5,7 +5,7 @@ from human_response import generate_human_response
 def chatbot(user_input):
     search_code = generate_search_code(user_input)
     list_response = search_code.split(" ")
-
+    print(search_code)
     if len(list_response) == 1:
         try:
             link = f"https://dummyjson.com/products/search?q={search_code}"
